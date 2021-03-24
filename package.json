@@ -3,7 +3,6 @@
   "version": "1.1.1",
   "description": "Execute redis command",
   "main": "dist/index.js",
-  "readme": "./docs/README.md",
   "scripts": {
     "doc": "typedoc --tsconfig tsconfig.doc.json --watch src/index.ts",
     "build:doc": "rm -rf docs && typedoc --plugin typedoc-plugin-markdown --tsconfig tsconfig.doc.json src/index.ts",
@@ -18,6 +17,8 @@
     "ioredis": "^4.24.3",
     "lodash": "^4.17.21"
   },
+  "readme": "./docs/README.md",
+  "homepage": "https://github.com/doanthuanthanh88",
   "author": "doanthuanthanh88@gmail.com",
   "license": "MIT",
   "devDependencies": {
