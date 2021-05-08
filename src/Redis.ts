@@ -108,7 +108,7 @@ export class Redis extends Tag {
             this.context.Utils.json(res.result).split('\n').map(e => this.context.log(chalk.yellow(e)))
           }
         }
-        if (query.var) this.setVar(query.var, res)
+        if (query.var) this.setVar(query.var, res.result)
         if (!this.slient && query.title) this.context.groupEnd()
       }
     } finally {

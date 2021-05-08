@@ -1,4 +1,4 @@
-export * from './Redis'
+export { Redis } from './Redis'
 
 // import { Redis } from './Redis'
 

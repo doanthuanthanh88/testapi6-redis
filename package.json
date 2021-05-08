@@ -1,6 +1,6 @@
 {
   "name": "testapi6-redis",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Execute redis command",
   "main": "dist/index.js",
   "scripts": {
@@ -19,8 +19,15 @@
   },
   "readme": "./docs/README.md",
   "homepage": "https://github.com/doanthuanthanh88",
-  "author": "doanthuanthanh88@gmail.com",
+  "author": {
+		"name": "Đoàn Thuận Thành",
+		"email": "doanthuanthanh88@gmail.com"
+	},
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doanthuanthanh88/testapi6-redis"
+  },
   "devDependencies": {
     "@types/chalk": "^2.2.0",
     "@types/ioredis": "^4.22.1",
