@@ -66,8 +66,8 @@ export class Redis extends Tag {
 
   _db: IORedis.Redis
 
-  constructor(attrs: Redis) {
-    super(attrs)
+  init(attrs: Redis) {
+    super.init(attrs)
     if (!this.config) this.config = {} as any
     if (!this.commands) this.commands = []
   }
@@ -104,8 +104,10 @@ export class Redis extends Tag {
         }
         if (!this.slient) {
           this.context.log(`${chalk.green('%s')} ${chalk.gray('- %dms')}`, [query.command, ...query.args].join(' '), res.time)
-          if (res.result) {
-            this.context.Utils.json(res.result).split('\n').map(e => this.context.log(chalk.yellow(e)))
+          if (res.result && typeof res.result === 'object') {
+            this.context.log(chalk.yellow('%s'), this.context.Utils.json(res.result))
+          } else {
+            this.context.log(chalk.yellow('%s'), res.result)
           }
         }
         if (query.var) this.setVar(query.var, res.result)
