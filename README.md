@@ -16,15 +16,16 @@ npm install -g testapi6-redis
 yarn global add testapi6-redis
 ```
 
+# Configuration
+
+Read [ioredis](https://www.npmjs.com/package/ioredis)
+
 ### Use in yaml
 ```yaml
-- Require:
-    root: path_to_this_modules
-    modules:
-      - testapi6-redis/dist/index.js
-- Redis:
+- testapi6-redis.Redis:
     connection: redis://localhost:6379
     commands: 
+      - get users
       - title: Get users
         command: 
           - get

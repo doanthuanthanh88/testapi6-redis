@@ -27,6 +27,22 @@ export class RedisCommand {
  * Execute redis command
  */
 export class Redis extends Tag {
+  static get des() {
+    return `Execute redis command`
+  }
+  static get example() {
+    return `# Read more configuration: https://www.npmjs.com/package/ioredis
+- testapi6-redis.Redis:
+    connection: redis://localhost:6379
+    commands: 
+      - get users
+      - title: Get users
+        command: 
+          - get
+          - users
+        var: rs
+`
+  }
   /** 
    * Redis connection string 
    * 
